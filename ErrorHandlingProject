@@ -1,0 +1,27 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract ErrorHandlingContract {
+    uint public value;
+
+    function setValue(uint _value) public {
+        require(_value > 0, "Value should not be 0 or less");
+
+        value = _value;
+    }
+
+    function getValue() public view returns (uint) {
+        return value;
+    }
+
+    function testAssert(uint _value) view  public {
+        assert(value == _value);
+    }
+
+    function divide(uint _divisor) public view returns (uint) {
+        if (_divisor == 0) {
+            revert("Cannot divide by 0");
+        }
+        return value / _divisor;
+    }
+}
