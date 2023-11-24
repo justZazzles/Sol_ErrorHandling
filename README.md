@@ -21,7 +21,7 @@ Solidity ^0.8.17
 
 (3) revert(): Can be used to flag an error and revert the current call. You can also provide a message containing details about the error, and the message will be passed back to the caller. However, the message, like in require(), is an optional parameter. revert() causes the EVM to revert all the changes made to the state, and things return to the state before the function call was made.
 ## Executing the program
-This project was made and executed in remix.ethereum.org.
+To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
 # Author
 Francis Santos
 @justZazzles
